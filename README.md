@@ -36,7 +36,6 @@ pip3 install -r requirements.txt
 ``` 
 
 ### Generated translated file
-### Install Essential Site Package
 
 ```buildoutcfg
 python3 main.py
