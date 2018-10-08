@@ -22,7 +22,7 @@ for target, content in translation_content.items():
             continue
         res = trans.translation(translate_client, text, target.split('-')[0])
         print(type(res['translatedText']))
-        trans_res[target].update({text, res['translatedText']})
+        # trans_res[target].update({text, res['translatedText']})
 
 print(trans_res)
 
