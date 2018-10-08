@@ -6,29 +6,21 @@ import json
 
 translate_client = translate.Client()
 
-# text = u'Hello, world!'
-# target = 'ru'
-
 with open('translations.json') as translation_file:
     translation_content = json.load(translation_file)
 
-# print(translation_content)
 trans_res = {}
 for target, content in translation_content.items():
     trans_res[target] = {}
     for text, trans_content in content.items():
         if trans_content != '':
             trans_res[target][text] = trans_content
-            # trans_res[target].update({text, trans_content})
             continue
         res = trans.translation(translate_client, text, target.split('-')[0])
-        # print(type(res['translatedText']))
-        print(text)
         trans_res[target][text] = res['translatedText']
-        # trans_res[target].update({text, res['translatedText']})
 
-
-print(trans_res)
+with open('translations_after.json', 'w') as outfile:
+    json.dump(trans_res, outfile)
 
 # http = urllib3.PoolManager()
 #
