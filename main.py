@@ -27,7 +27,7 @@ for target, content in translation_content.items():
             print('Error occurs while attempting to translate')
             print(Exception)
             break
-        res = json.loads(res)
+        print(res['translatedText'])
         trans_res[target][text] = res['translatedText']
 
 # Write translation result into new json file
