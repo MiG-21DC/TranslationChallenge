@@ -9,7 +9,7 @@ translate_client = translate.Client()
 # text = u'Hello, world!'
 # target = 'ru'
 
-with open('translation.json') as translation_file:
+with open('translations.json') as translation_file:
     translation_content = json.load(translation_file)
 
 for target, content in translation_content:
