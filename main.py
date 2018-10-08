@@ -17,6 +17,8 @@ for target, content in translation_content.items():
     for text, trans_content in content.items():
         if trans_content != '':
             continue
+        print(text)
+        print(target)
         res = trans.translation(translate_client, text, target)
 
         print(res)
