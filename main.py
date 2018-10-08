@@ -13,15 +13,16 @@ with open('translations.json') as translation_file:
     translation_content = json.load(translation_file)
 
 # print(translation_content)
+trans_res = {}
 for target, content in translation_content.items():
     for text, trans_content in content.items():
         if trans_content != '':
-            print('empty')
+            trans_res[target].update({text, trans_content})
             continue
         res = trans.translation(translate_client, text, target.split('-')[0])
+        trans_res[target].update({text, res['translatedText']})
 
-        print(res)
-
+print(trans_res)
 
 # http = urllib3.PoolManager()
 #
