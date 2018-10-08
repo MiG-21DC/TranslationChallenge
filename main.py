@@ -34,5 +34,5 @@ for target, content in translation_content.items():
 
 # Write translation result into new json file
 with open('translations_after.json', 'w') as outfile:
-    json.dump(trans_res, outfile, index=4)
+    json.dump(trans_res, outfile, indent=4)
 
