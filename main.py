@@ -27,9 +27,10 @@ for target, content in translation_content.items():
             print('Error occurs while attempting to translate')
             print(Exception)
             break
-        print(res)
-        print(type(res))
-        trans_res[target][text] = res['translatedText']
+        # print(res)
+        # print(type(res))
+        # trans_res[target][text] = res['translatedText']
+        trans_res[target][text] = res
 
 # Write translation result into new json file
 with open('translations_after.json', 'w') as outfile:
