@@ -2,15 +2,23 @@ import urllib3
 import json
 import scripts.translation as trans
 from google.cloud import translate
+import json
 
 translate_client = translate.Client()
 
-text = u'Hello, world!'
-target = 'ru'
+# text = u'Hello, world!'
+# target = 'ru'
 
-res = trans.translation(translate_client, text, target)
+with open('translation.json') as translation_file:
+    translation_content = json.load(translation_file)
 
-print(res)
+for target, content in translation_content:
+    for text, trans_content in content:
+        if trans_content != '':
+            continue
+        res = trans.translation(translate_client, text, target)
+
+        print(res)
 
 
 # http = urllib3.PoolManager()
