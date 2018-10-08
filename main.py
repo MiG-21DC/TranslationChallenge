@@ -1,6 +1,6 @@
 import urllib3
 import json
-from scripts.translation import translation
+import scripts.translation as trans
 from google.cloud import translate
 
 translate_client = translate.Client()
@@ -8,7 +8,7 @@ translate_client = translate.Client()
 text = u'Hello, world!'
 target = 'ru'
 
-res = translate(translate_client, text, target)
+res = trans.translation(translate_client, text, target)
 
 print(res)
 
