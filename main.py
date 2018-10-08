@@ -12,6 +12,7 @@ translate_client = translate.Client()
 with open('translations.json') as translation_file:
     translation_content = json.load(translation_file)
 
+print(translation_content)
 for target, content in translation_content:
     for text, trans_content in content:
         if trans_content != '':
