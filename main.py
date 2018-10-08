@@ -17,7 +17,7 @@ for target, content in translation_content.items():
     for text, trans_content in content.items():
         if trans_content != '':
             continue
-        res = trans.translation(translate_client, text, 'de')
+        res = trans.translation(translate_client, text, target.split('-')[0])
 
         print(res)
 
