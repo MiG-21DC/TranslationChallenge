@@ -21,7 +21,7 @@ for target, content in translation_content.items():
             trans_res[target].update({text, trans_content})
             continue
         res = trans.translation(translate_client, text, target.split('-')[0])
-        print(type(res['translatedText']))
+        print(type(text))
         # trans_res[target].update({text, res['translatedText']})
 
 print(trans_res)
