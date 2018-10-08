@@ -15,7 +15,7 @@ with open('translations.json') as translation_file:
 # print(translation_content)
 trans_res = {}
 for target, content in translation_content.items():
-    trans_res.update({target, {}})
+    trans_res[target] = {}
     for text, trans_content in content.items():
         if trans_content != '':
             trans_res[target].update({text, trans_content})
