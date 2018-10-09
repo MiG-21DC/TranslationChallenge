@@ -1,8 +1,7 @@
 '''
-Tha main program that read local json file, and implement Google translation API to translate words into target language
+The main program that reads local json file, and implement Google translation API to translate words into target language
 '''
 
-# import scripts.translation as trans
 from scripts.translation import Translations
 from google.cloud import translate
 import json
