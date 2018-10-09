@@ -1,11 +1,4 @@
-# Translation function with Google Translation API
-# def translation(client, text, target):
-#     res = client.translate(
-#         text,
-#         target_language=target, source_language='en')
-#     return res['translatedText']
-
-
+# Translation object with Google Translation API
 class Translations:
     def __init__(self, client, target, content):
         self.target = target
@@ -15,7 +8,7 @@ class Translations:
         self.translated_content = self.translation()
 
     def translation(self):
-        trans_res = {}
+        trans_res = dict()
         trans_res[self.target] = {}
         for text, trans_text in self.content.items():
             if trans_text != '':
