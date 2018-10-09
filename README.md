@@ -17,8 +17,8 @@ Some of the translations (values) are empty strings and they should be filled in
 - There is no need to obtain or provide a real Google Translate API key
 
 
-## Getting Start
-This project is written by Python 3.7.0. Please make sure that the test environment is based on Python 3.6 or later.
+## Get Started
+This project is written in Python 3.7.0. Please make sure that the test environment is based on Python 3.6 or later.
 
 ### Install and Implement Test Environment
 Visit https://cloud.google.com/translate/docs/reference/libraries to obtain Google Translation service key and setup environment variable.
@@ -35,7 +35,7 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 ``` 
 
-### Generated translated file
+### Obtain Translated File
 
 ```buildoutcfg
 python3 main.py
