@@ -10,7 +10,6 @@ import json
 translate_client = translate.Client()
 trans_res = {}
 
-
 # Read local json file
 with open('translations.json') as translation_file:
     translation_content = json.load(translation_file)

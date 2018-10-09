@@ -19,7 +19,7 @@ class Translations:
                     text,
                     target_language=self.target.split('-')[0], source_language='en')
             except Exception:
-                print('Error occurs while attempting to translate: {}').format(text)
+                print('Error occurs while attempting to translate: {}'.format(text))
                 print(Exception)
                 break
             trans_res[self.target][text] = res['translatedText']
