@@ -19,7 +19,7 @@ with open('translations.json') as translation_file:
 trans_res = {}
 for target, content in translation_content.items():
     trans = Translations(translate_client, target, content)
-    trans_res.update({target, trans.translated_content})
+    trans_res[target] = trans.translated_content
 # # Implement translation function
 # for target, content in translation_content.items():
 #     trans_res[target] = {}
